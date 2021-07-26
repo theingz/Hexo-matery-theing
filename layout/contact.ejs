@@ -1,0 +1,94 @@
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/barrager.css">
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.barrager.js"></script>
+
+<%- partial('_partial/bg-cover') %>
+
+<style>
+    #send{
+        margin-bottom: 10px;
+        width: 49%;
+        background-color: #0ba360;
+    }
+    #clear{
+        margin-bottom: 10px;
+        width: 49%;
+        background-color: #e7c65c;
+    }
+</style>
+<main class="content">
+    <div id="contact" class="container chip-container">
+       
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-comments"></i>&nbsp;&nbsp;<%= __('contact') %>
+                </div>
+                <%- page.content %>
+            </div>
+            <div class="card-content article-card-content center-right">
+                <div id="articleContent" data-aos="fade-up" class="aos-init aos-animate">
+                    <h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换" target="_blank"></a>友链交换</h1>
+                    <p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p>
+                    <ul>
+                        <li><strong>名称：</strong>你的博客名称</li>
+                        <li><strong>地址：</strong>你的博客地址</li>
+                        <li><strong>简介：</strong>一句话简介</li>
+                        <li><strong>头像：</strong>你的头像地址</li>
+                    </ul>
+                    <p>例如我的博客友链，大家可以加到自己博客里哦：</p>
+                    <ul>
+                        <li><strong>名称：</strong>theing</strong></li>
+                        <li><strong>地址：</strong><a href="https://theing.gitee.io" target="_blank">https://theing.gitee.io</a></li>
+                        <li><strong>简介：</strong>开心才是最重要的。</li>
+                        <li><strong>头像：</strong><a href="https://theing.gitee.io/auther2.png">头像</a></li>
+                                
+                    </ul>
+                    <h4>欢迎大家留言!!<h4/>
+            
+                </div>
+                
+            </div>
+
+        </div>
+
+        
+        <!--其他评论card-->
+        <div class="card">
+            <% if (theme.gitalk && theme.gitalk.enable) { %>
+                <%- partial('_partial/gitalk') %>
+            <% } %>
+
+            <% if (theme.gitment.enable) { %>
+                <%- partial('_partial/gitment') %>
+            <% } %>
+
+            <% if (theme.disqus.enable) { %>
+                <%- partial('_partial/disqus') %>
+            <% } %>
+
+            <% if (theme.livere && theme.livere.enable) { %>
+                <%- partial('_partial/livere') %>
+            <% } %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+                <%- partial('_partial/valine') %>
+            <% } %>
+
+            <% if (theme.minivaline && theme.minivaline.enable) { %>
+                <%- partial('_partial/minivaline') %>
+            <% } %>
+
+            <% if (theme.twikoo && theme.twikoo.enable) { %>
+                <%- partial('_partial/twikoo') %>
+            <% } %>
+
+            <% if (theme.changyan && theme.changyan.enable) { %>
+                <%- partial('_partial/changyan') %>
+            <% } %>
+
+        </div>
+    </div>
+</main>
